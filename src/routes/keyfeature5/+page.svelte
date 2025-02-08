@@ -4,15 +4,15 @@
     let suggestions = [];
 
     function detectDisease() {
-        if (symptoms.includes("diarrhea") && symptoms.includes("vomiting")) {
-            disease = "Food Poisoning";
-            suggestions = ["Drink plenty of fluids", "Avoid solid food", "Rest"];
-        } else if (symptoms.includes("headache") && symptoms.includes("fatigue")) {
-            disease = "Migraine";
-            suggestions = ["Rest in a dark room", "Stay hydrated", "Take pain relievers"];
-        } else if (symptoms.includes("rash") && symptoms.includes("fatigue")) {
-            disease = "Allergic Reaction";
-            suggestions = ["Avoid allergens", "Apply anti-itch cream", "Consult a doctor if severe"];
+        if (symptoms.includes("fever") && symptoms.includes("cough") && symptoms.includes("shortness of breath")) {
+            disease = "Legionnaires' disease";
+            suggestions = ["Seek medical attention immediately", "Get plenty of rest", "Stay hydrated"];
+        } else if (symptoms.includes("diarrhea") && symptoms.includes("abdominal cramps") && symptoms.includes("weight loss")) {
+            disease = "Giardiasis (C)";
+            suggestions = ["Drink plenty of fluids", "Avoid fatty or greasy foods", "Take medication as prescribed by your doctor"];
+        } else if (symptoms.includes("diarrhea") && symptoms.includes("stomach cramps") && symptoms.includes("loss of appetite")) {
+            disease = "Cryptosporidiosis (C)";
+            suggestions = ["Drink plenty of fluids", "Avoid close contact with others", "Take medication as prescribed by your doctor"];
         } else {
             disease = "Unknown Condition";
             suggestions = ["Consult a doctor", "Monitor symptoms", "Stay hydrated"];
@@ -31,7 +31,7 @@
         <h3>Select your symptoms:</h3>
 
         <div class="symptom-list">
-            {#each ["diarrhea", "vomiting", "headache", "fatigue", "rash"] as symptom}
+            {#each ["fever", "cough", "shortness of breath", "diarrhea", "abdominal cramps", "weight loss", "stomach cramps", "loss of appetite"] as symptom}
                 <label class="symptom-option">
                     <input type="checkbox" value={symptom} bind:group={symptoms} />
                     {symptom.charAt(0).toUpperCase() + symptom.slice(1)}
