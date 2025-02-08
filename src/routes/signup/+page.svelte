@@ -19,7 +19,6 @@
 
 <div class="container h-full mx-auto flex justify-center items-center">
     <div class="space-y-10 text-center flex flex-col items-center relative">
-        <a href="/" class="absolute btn variant-filled" style="top: 0; left: 0; margin: 10px 0 0 10px; padding: 10px 20px;">Back</a>
         <h2 class="h2">Sign Up Page</h2>
         <!-- Animated Background -->
         <figure>

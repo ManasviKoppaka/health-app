@@ -42,6 +42,7 @@
   "dependencies": {
     "@floating-ui/dom": "1.6.13",
     "highlight.js": "11.11.1",
+    "leaflet": "^1.9.4",
     "svelte-routing": "^2.13.0"
   }
 }
